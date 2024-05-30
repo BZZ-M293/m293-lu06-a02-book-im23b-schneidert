@@ -3,29 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>LU06.A02 - Buch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
 </head>
 <body>
-<form action="https://it.bzz.ch/demo/formdata/index.php" method="Get">
-    <label for="buchtitel">Buchtitel</label>
-    <input id="buchtitel" name="buchtitel" type="text" minlength="2" maxlength="30"
-           required><br>
-
-    <label for="autoren">Autoren</label>
-    <input id="autoren" name="autoren" type="text" minlength="5"
-           maxlength="50"><br>
-
-    <label for="preis">Preis</label>
-    <input id="preis" name="preis" type="number" min="0.05" max="99.95 "><br>
-
-    <label for="datum">Datum</label>
-    <input id="datum" name="datum" type="date" min="0.05" max="99.95 "><br>
-
-    <label for="bereich">Bereich</label>
-    <input id="bereich" name="bereich" type="number" min="1" max="9"><br>
-
-
-    <button type="submit">Absenden</button>
-    <button type="reset">zurücksetzen</button>
-</form>
+<main>
+    <form action="https://it.bzz.ch/demo/formdata/index.php" method="get">
+        <div style="text-align: center">
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label class="form-label" for="buchtitel">Buchtitel</label>
+                <input class="form-control" id="buchtitel" name="buchtitel"
+                       type="text"
+                       minlength="2"
+                       maxlength="30"
+                       required><br>
+            </div>
+            <div class="col-auto"style="text-align: center">
+                <label class="form-label" for="autoren">Autoren</label>
+                <input class="form-control" id="autoren" name="autoren"
+                       type="text"
+                       minlength="5"
+                       maxlength="50"><br>
+            </div>
+            <div class="col-auto">
+                <label for="preis" class="form-label">Preis</label>
+                <input id="preis" name="preis" type="number" min="0.05"
+                       max="99.95 "
+                       class="form-control"><br>
+            </div>
+            <div class="col-auto">
+                <label for="datum" class="form-label">Datum</label>
+                <input id="datum" name="datum" type="date" min="0.05"
+                       max="99.95 "
+                       class="form-control"><br>
+            </div>
+            <label for="bereich" class="form-label">Bereich</label>
+            <input id="bereich" name="bereich" type="range" min="1" max="9"
+                   class="form-range"><br>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Absenden
+                </button>
+                <button type="reset" class="btn btn-primary mb-3">zurücksetzen
+                </button>
+            </div>
+            </div>
+        </div>
+    </form>
+</main>
 </body>
 </html>
